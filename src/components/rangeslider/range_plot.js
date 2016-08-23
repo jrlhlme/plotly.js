@@ -98,7 +98,8 @@ function makeScatter(trace, pointPairs, w, h) {
     if(trace.line) {
         line = document.createElementNS(svgNS, 'path');
 
-        var linePath = Drawing.smoothopen(pointPairs, trace.line.smoothing || 0);
+        //var linePath = Drawing.smoothopen(pointPairs, trace.line.smoothing || 0);
+        var linePath = Drawing.steps('hv');
 
         helpers.setAttributes(line, {
             'd': linePath,
